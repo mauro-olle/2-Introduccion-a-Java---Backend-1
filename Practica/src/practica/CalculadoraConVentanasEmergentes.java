@@ -1,36 +1,15 @@
 package practica;
 
-
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author mauro
- */
 public class CalculadoraConVentanasEmergentes {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        /*
-        int num1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-        int num2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
-        
-        int suma = num1 + num2;
-        
-        JOptionPane.showMessageDialog(null, "La suma es "+suma);
-        */
+
         int opcion;
         do{
         String [] arreglo = {"Sumar","Restar","Multiplicar","Dividir","Cerrar"};
-        opcion = JOptionPane.showOptionDialog(null, "Elige una Opcion", "Calculadora", 0, JOptionPane.QUESTION_MESSAGE, null, arreglo, "");
+        opcion = JOptionPane.showOptionDialog(null, "Elige una Opcion", "Calculadora", 0, JOptionPane.QUESTION_MESSAGE, null, arreglo, "Cerrar");
         
         switch (opcion) {
             case 0:
