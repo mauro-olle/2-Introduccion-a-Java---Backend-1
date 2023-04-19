@@ -22,9 +22,17 @@ public class Ejercicio2 {
             System.out.println("¿Desea ingresar otra persona?");
             respuesta = leer.next().toLowerCase();
         
-            if (respuesta.equals("si")) Personas ();
-            else if (respuesta.equals("no")) System.out.println("Muchas gracias");
-            else System.out.println("Ingrese una opcion correcta");
+            switch (respuesta) {
+                case "si":
+                    Personas ();
+                    break;
+                case "no":
+                    System.out.println("Muchas gracias");
+                    break;
+                default:
+                    System.out.println("Ingrese una opcion correcta");
+                    break;
+            }
         }
     }
     
