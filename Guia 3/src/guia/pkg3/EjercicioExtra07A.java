@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author mauro
  */
-public class EjercicioExtra7A {
+public class EjercicioExtra07A {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         
@@ -29,8 +29,8 @@ public class EjercicioExtra7A {
             System.out.println("Ingrese un numero");
             num = leer.nextInt();
             
-            if (num > max) max = num;
-            if (num < min) min = num;
+            max = Math.max(max,num);
+            min = Math.min(min,num);
             acumulador += num;
             cont ++;
         }

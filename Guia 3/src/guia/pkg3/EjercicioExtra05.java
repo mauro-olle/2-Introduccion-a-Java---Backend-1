@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author mauro
  */
-public class EjercicioExtra5 {
+public class EjercicioExtra05 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         

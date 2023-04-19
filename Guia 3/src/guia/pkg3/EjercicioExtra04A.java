@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author mauro
  */
-public class EjercicioExtra4 {
+public class EjercicioExtra04A {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         String romano = "";
@@ -25,7 +25,7 @@ public class EjercicioExtra4 {
         switch (num) {
             case 1:
                 romano = "I";
-                return;
+                break;
             case 2:
                 romano = "II";
                 break;

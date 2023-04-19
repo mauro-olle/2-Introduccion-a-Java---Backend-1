@@ -30,8 +30,8 @@ public class Ejercicio7 {
             System.out.println("Ingrese su clave");
             clave = leer.next().toLowerCase();
             
-            if (clave.substring(0,1).equals("x") && clave.substring(4,5).equals("o") &&clave.length() == 5) contCorrecto++;
-            else contIncorrecto ++;
+            if (clave.substring(0,1).equals("x") && clave.substring(clave.length() - 1, clave.length()).equals("o") && clave.length() <= 5) contCorrecto++;
+            else if (!clave.equals("&&&&&"))contIncorrecto ++;
         } while (!clave.equals("&&&&&"));
                 
         System.out.println("Intentos correctos " + contCorrecto);

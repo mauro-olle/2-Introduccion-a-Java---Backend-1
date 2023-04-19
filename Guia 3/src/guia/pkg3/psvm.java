@@ -9,8 +9,6 @@ package guia.pkg3;
  *
  * @author mauro
  */
-public class EjercicioExtra02{
-    public static void main(String[] args) {
-        
-    }
+class psvm {
+    
 }
