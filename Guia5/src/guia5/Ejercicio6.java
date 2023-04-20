@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class Ejercicio6 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
         boolean bandera = true;
         
         System.out.println("Ingrese el tamaño del cuadrado");
@@ -21,7 +21,7 @@ public class Ejercicio6 {
         
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < m; j++) {
-                System.out.printf("Ingrese el elemento [%d][%d]",i,j);
+                System.out.printf("Ingrese el elemento [%d][%d] \n",i,j);
                 matriz [i][j] = sc.nextInt();
             }
         }

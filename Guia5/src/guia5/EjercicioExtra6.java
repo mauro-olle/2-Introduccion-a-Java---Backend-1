@@ -15,8 +15,10 @@ public class EjercicioExtra6 {
         Scanner sc = new Scanner(System.in);
         
         String sopaDeLetras[][] = new String [20][20];
-        int longitud;
+        int longitud, fila, columna;
+        int pos = 0;
         String palabra;
+        boolean bandera = true;
         
         for (int i = 0; i < 5; i++) {
             do {
@@ -27,16 +29,26 @@ public class EjercicioExtra6 {
                 if (longitud < 3 || longitud > 5) System.out.println("Debe tener entre 3 y 5 caracteres");
             } while (longitud < 3 || longitud > 5);
             
-            int fila = (int) (Math.random() * 20);
+            do {
+                fila = (int) (Math.random() * 20);
+                columna = (int) (Math.random() * 15);
+                
+                for (int j = columna; j < columna+longitud; j++) {
+                    if (sopaDeLetras[fila][j] != null) bandera = false;
+                }
+            } while (bandera == false);
+
             
-            for (int j = 0; j < longitud; j++) {
-                sopaDeLetras[fila][j] = palabra.substring(j,j+1);
+            for (int j = columna; j < longitud+columna; j++) {
+                sopaDeLetras[fila][j] = palabra.substring(pos,pos+1);
+                pos ++;
             }
+            pos = 0;
         }
         
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j < 20; j++) {
-                if (sopaDeLetras[i][j] == null) sopaDeLetras[i][j] = String.valueOf((int) (Math.random() * 9 + 1));
+                if (sopaDeLetras[i][j] == null) sopaDeLetras[i][j] = "*"; //String.valueOf((int) (Math.random() * 9 + 1));
             }
         }
         
@@ -48,11 +60,5 @@ public class EjercicioExtra6 {
             }
             System.out.println("");
         }
-        
-        
-        
-        
-        
-        
     }
 }
