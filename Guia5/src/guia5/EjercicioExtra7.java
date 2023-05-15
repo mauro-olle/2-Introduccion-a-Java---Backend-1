@@ -10,7 +10,6 @@ La sucesión de Fibonacci se puede formalizar de acuerdo a la siguiente fórmula
 Fibonaccin = Fibonaccin-1 + Fibonaccin-2 para todo n>1
 Fibonaccin = 1 para todo n<=1
 Por lo tanto, si queremos calcular el término “n” debemos escribir una función que reciba como parámetro el valor de “n” y que calcule la serie hasta llegar a ese valor.
-
  */
 package guia5;
 
