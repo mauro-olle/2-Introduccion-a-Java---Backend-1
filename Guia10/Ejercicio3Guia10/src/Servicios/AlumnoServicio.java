@@ -17,7 +17,7 @@ public class AlumnoServicio {
         do {
             Scanner sc = new Scanner(System.in).useDelimiter("\n");
             ArrayList<Integer> notas = new ArrayList();
-
+            
             System.out.println("Ingrese el nombre del alumno");
             String nombre = sc.next();
 

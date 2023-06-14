@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EjercicioExtra2Guia12">
+  <ClassDiagramComponents>
+    <Class name="EjercicioExtra2Guia12" package="ejercicioextra2guia12" visibility="public" xPosition="50.0" yPosition="64.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Edificio" package="Entidades" visibility="public" isAbstract="true" xPosition="755.0" yPosition="10.0">
+      <Fields>
+        <Field name="Ancho" type="Double" visibility="protected"/>
+        <Field name="Alto" type="Double" visibility="protected"/>
+        <Field name="Largo" type="Double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Double" name="Ancho"/>
+          <Argument type="Double" name="Largo"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Double" name="Ancho"/>
+          <Argument type="Double" name="Alto"/>
+          <Argument type="Double" name="Largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAncho" returnType="Double" visibility="public"/>
+        <Method name="setAncho" returnType="void" visibility="public">
+          <Argument type="Double" name="Ancho"/>
+        </Method>
+        <Method name="getAlto" returnType="Double" visibility="public"/>
+        <Method name="setAlto" returnType="void" visibility="public">
+          <Argument type="Double" name="Alto"/>
+        </Method>
+        <Method name="getLargo" returnType="Double" visibility="public"/>
+        <Method name="setLargo" returnType="void" visibility="public">
+          <Argument type="Double" name="Largo"/>
+        </Method>
+        <Method name="calcularSuperficie" returnType="double" visibility="protected" isAbstract="true"/>
+        <Method name="calcularVolumen" returnType="double" visibility="protected" isAbstract="true"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EdificioDeOficinas" package="Entidades" visibility="public" xPosition="40.0" yPosition="476.0">
+      <Fields>
+        <Field name="NumeroDeOficinasPorPiso" type="Integer" visibility="private"/>
+        <Field name="CantidadDePersonasPorOficina" type="Integer" visibility="private"/>
+        <Field name="NumeroDePisos" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="NumeroDeOficinasPorPiso"/>
+          <Argument type="Integer" name="CantidadDePersonasPorOficina"/>
+          <Argument type="Integer" name="NumeroDePisos"/>
+          <Argument type="Double" name="Ancho"/>
+          <Argument type="Double" name="Alto"/>
+          <Argument type="Double" name="Largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroDeOficinasPorPiso" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroDeOficinasPorPiso" returnType="void" visibility="public">
+          <Argument type="Integer" name="NumeroDeOficinasPorPiso"/>
+        </Method>
+        <Method name="getCantidadDePersonasPorOficina" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadDePersonasPorOficina" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantidadDePersonasPorOficina"/>
+        </Method>
+        <Method name="getNumeroDePisos" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroDePisos" returnType="void" visibility="public">
+          <Argument type="Integer" name="NumeroDePisos"/>
+        </Method>
+        <Method name="crearEdificio" returnType="EdificioDeOficinas" visibility="public"/>
+        <Method name="cantPersonas" returnType="void" visibility="public">
+          <Argument type="EdificioDeOficinas" name="e"/>
+        </Method>
+        <Method name="calcularSuperficie" returnType="double" visibility="public"/>
+        <Method name="calcularVolumen" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Polideportivo" package="Entidades" visibility="public" isFinal="true" xPosition="1064.0" yPosition="476.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="private"/>
+        <Field name="TipoDeInstalacion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="TipoDeInstalacion"/>
+          <Argument type="Double" name="Ancho"/>
+          <Argument type="Double" name="Largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getTipoDeInstalacion" returnType="String" visibility="public"/>
+        <Method name="setTipoDeInstalacion" returnType="void" visibility="public">
+          <Argument type="String" name="TipoDeInstalacion"/>
+        </Method>
+        <Method name="crearPolideportivo" returnType="Polideportivo" visibility="public"/>
+        <Method name="calcularSuperficie" returnType="double" visibility="public"/>
+        <Method name="calcularVolumen" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidades.EdificioDeOficinas" target="Entidades.EdificioDeOficinas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Polideportivo" target="Entidades.Polideportivo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Polideportivo" target="Entidades.Edificio"/>
+    <IsRelation name="is" source="Entidades.EdificioDeOficinas" target="Entidades.Edificio"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

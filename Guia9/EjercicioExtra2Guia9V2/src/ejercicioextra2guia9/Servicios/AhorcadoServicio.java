@@ -12,20 +12,19 @@ public class AhorcadoServicio {
 
     Scanner sc = new Scanner(System.in).useDelimiter("\n");
 
-    private Ahorcado CrearJuego() {
-        System.out.println("Ingrese la palabra a adivinar");
-        String palabra = sc.next();
-
-        System.out.println("Ingrese la cantidad de intentos que tendra para adivinar la palabra");
-        int intentos = sc.nextInt();
-
-        String palabraVector[] = new String[palabra.length()];
-
+    private Ahorcado CrearAhorcado(){
+        
+        String[] palabras = {"abogado", "abrazar", "absoluto", "abundar", "acceder", "bailarín", "bailarina", "balcón", "bancarrota", "bandeja", "caballo", "caballero", "caballos", "cabecera", "cabellera", "dama", "danza", "darle", "deberes", "decisión","elefante","elegante","elemento","elevar","eliminar","familia","fantasma","farmacia","favorito","fenómeno","gama","ganador","ganancia","garantía","gasolina","hacer","hallazgo","hamburguesa","herencia","hermano","idioma","igualdad","iluminar","imagen","imaginación","jamaica","jamón","jardín","kilómetro","kilogramo","laboral","laboratorio","lamentablemente","lámpara","magnífico","maíz","maldición","nacionalidad","nacimiento","obligación","paciencia","quemadura","radiación","sabiduría","tablero","vacaciones","wafle","xilófono"};
+        
+        String palabra = palabras[(int)(Math.random()*68)];
+        
+        String[] palabraVector = new String[palabra.length()];
+        
         for (int i = 0; i < palabra.length(); i++) {
             palabraVector[i] = String.valueOf(palabra.charAt(i));
         }
 
-        return new Ahorcado(palabraVector, intentos);
+        return new Ahorcado(palabraVector);
     }
 
     private void MostrarLongitud(Ahorcado a) {
@@ -68,9 +67,8 @@ public class AhorcadoServicio {
     private void IntentosRestantes(Ahorcado a, String l) {
         boolean bandera = Encontradas(a, l);
 
-        if (!bandera) {
+        if (bandera) {
             a.setIntentos(a.getIntentos() - 1);
-        } else {
         }
 
         System.out.println("A usted le quedan " + a.getIntentos() + " intentos");
@@ -89,7 +87,7 @@ public class AhorcadoServicio {
     }
 
     public void Jugar() {
-        Ahorcado juego = CrearJuego();
+        Ahorcado juego = CrearAhorcado();
         ArrayList<String> letrasIngresadas = new ArrayList();
 
         do {

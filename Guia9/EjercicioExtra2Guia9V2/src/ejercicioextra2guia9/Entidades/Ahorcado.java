@@ -14,6 +14,11 @@ public class Ahorcado {
     public Ahorcado() {
     }
 
+    public Ahorcado(String[] Palabra) {
+        this.Palabra = Palabra;
+        Intentos = 1;
+    }
+
     public Ahorcado(String[] Palabra, int Intentos) {
         this.Palabra = Palabra;
         this.Intentos = Intentos;

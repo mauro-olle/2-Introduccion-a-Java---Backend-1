@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidades">
+  <ClassDiagramComponents>
+    <Class name="Alojamiento" package="Entidades" visibility="public" xPosition="1726.0" yPosition="-5.0">
+      <Fields>
+        <Field name="Nombre" type="String" visibility="protected"/>
+        <Field name="Direccion" type="String" visibility="protected"/>
+        <Field name="Localidad" type="String" visibility="protected"/>
+        <Field name="Gerente" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="Direccion"/>
+        </Method>
+        <Method name="getLocalidad" returnType="String" visibility="public"/>
+        <Method name="setLocalidad" returnType="void" visibility="public">
+          <Argument type="String" name="Localidad"/>
+        </Method>
+        <Method name="getGerente" returnType="String" visibility="public"/>
+        <Method name="setGerente" returnType="void" visibility="public">
+          <Argument type="String" name="Gerente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AlojamientoExtrahotelero" package="Entidades" visibility="public" xPosition="3001.0" yPosition="327.0">
+      <Fields>
+        <Field name="EsPrivado" type="Boolean" visibility="protected"/>
+        <Field name="SuperficieMetrosCuadrados" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Boolean" name="EsPrivado"/>
+          <Argument type="Integer" name="SuperficieMetrosCuadrados"/>
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEsPrivado" returnType="Boolean" visibility="public"/>
+        <Method name="setEsPrivado" returnType="void" visibility="public">
+          <Argument type="Boolean" name="EsPrivado"/>
+        </Method>
+        <Method name="getSuperficieMetrosCuadrados" returnType="Integer" visibility="public"/>
+        <Method name="setSuperficieMetrosCuadrados" returnType="void" visibility="public">
+          <Argument type="Integer" name="SuperficieMetrosCuadrados"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Camping" package="Entidades" visibility="public" xPosition="3492.0" yPosition="685.0">
+      <Fields>
+        <Field name="CapacidadMaxCarpas" type="Integer" visibility="private"/>
+        <Field name="CantidadBanios" type="Integer" visibility="private"/>
+        <Field name="TieneRestaurante" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="CapacidadMaxCarpas"/>
+          <Argument type="Integer" name="CantidadBanios"/>
+          <Argument type="Boolean" name="TieneRestaurante"/>
+          <Argument type="Boolean" name="EsPrivado"/>
+          <Argument type="Integer" name="SuperficieMetrosCuadrados"/>
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCapacidadMaxCarpas" returnType="Integer" visibility="public"/>
+        <Method name="setCapacidadMaxCarpas" returnType="void" visibility="public">
+          <Argument type="Integer" name="CapacidadMaxCarpas"/>
+        </Method>
+        <Method name="getCantidadBanios" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadBanios" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantidadBanios"/>
+        </Method>
+        <Method name="getTieneRestaurante" returnType="Boolean" visibility="public"/>
+        <Method name="setTieneRestaurante" returnType="void" visibility="public">
+          <Argument type="Boolean" name="TieneRestaurante"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel" package="Entidades" visibility="public" xPosition="-5.0" yPosition="327.0">
+      <Fields>
+        <Field name="NumeroHabitaciones" type="Integer" visibility="protected"/>
+        <Field name="NumeroCamas" type="Integer" visibility="protected"/>
+        <Field name="CantDePisos" type="Integer" visibility="protected"/>
+        <Field name="PrecioDeHabitaciones" type="Double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="NumeroHabitaciones"/>
+          <Argument type="Integer" name="NumeroCamas"/>
+          <Argument type="Integer" name="CantDePisos"/>
+          <Argument type="Double" name="PrecioDeHabitaciones"/>
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroHabitaciones" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroHabitaciones" returnType="void" visibility="public">
+          <Argument type="Integer" name="NumeroHabitaciones"/>
+        </Method>
+        <Method name="getNumeroCamas" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroCamas" returnType="void" visibility="public">
+          <Argument type="Integer" name="NumeroCamas"/>
+        </Method>
+        <Method name="getCantDePisos" returnType="Integer" visibility="public"/>
+        <Method name="setCantDePisos" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantDePisos"/>
+        </Method>
+        <Method name="getPrecioDeHabitaciones" returnType="Double" visibility="public"/>
+        <Method name="setPrecioDeHabitaciones" returnType="void" visibility="public">
+          <Argument type="Double" name="PrecioDeHabitaciones"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel4Estrellas" package="Entidades" visibility="public" xPosition="-5.0" yPosition="753.0">
+      <Fields>
+        <Field name="Gimnasio" type="Boolean" visibility="private"/>
+        <Field name="NombreDelRestaurante" type="String" visibility="private"/>
+        <Field name="CapacidadDelRestaurante" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Boolean" name="Gimnasio"/>
+          <Argument type="String" name="NombreDelRestaurante"/>
+          <Argument type="Integer" name="CapacidadDelRestaurante"/>
+          <Argument type="Integer" name="NumeroHabitaciones"/>
+          <Argument type="Integer" name="NumeroCamas"/>
+          <Argument type="Integer" name="CantDePisos"/>
+          <Argument type="Double" name="PrecioDeHabitaciones"/>
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGimnasio" returnType="Boolean" visibility="public"/>
+        <Method name="setGimnasio" returnType="void" visibility="public">
+          <Argument type="Boolean" name="Gimnasio"/>
+        </Method>
+        <Method name="getNombreDelRestaurante" returnType="String" visibility="public"/>
+        <Method name="setNombreDelRestaurante" returnType="void" visibility="public">
+          <Argument type="String" name="NombreDelRestaurante"/>
+        </Method>
+        <Method name="getCapacidadDelRestaurante" returnType="Integer" visibility="public"/>
+        <Method name="setCapacidadDelRestaurante" returnType="void" visibility="public">
+          <Argument type="Integer" name="CapacidadDelRestaurante"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hotel5Estrellas" package="Entidades" visibility="public" xPosition="-5.0" yPosition="1117.0">
+      <Fields>
+        <Field name="CantidadDeSalones" type="Integer" visibility="private"/>
+        <Field name="CantidadDeSuites" type="Integer" visibility="private"/>
+        <Field name="CantidadDeLimosinas" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="CantidadDeSalones"/>
+          <Argument type="Integer" name="CantidadDeSuites"/>
+          <Argument type="Integer" name="CantidadDeLimosinas"/>
+          <Argument type="Boolean" name="Gimnasio"/>
+          <Argument type="String" name="NombreDelRestaurante"/>
+          <Argument type="Integer" name="CapacidadDelRestaurante"/>
+          <Argument type="Integer" name="NumeroHabitaciones"/>
+          <Argument type="Integer" name="NumeroCamas"/>
+          <Argument type="Integer" name="CantDePisos"/>
+          <Argument type="Double" name="PrecioDeHabitaciones"/>
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCantidadDeSalones" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadDeSalones" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantidadDeSalones"/>
+        </Method>
+        <Method name="getCantidadDeSuites" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadDeSuites" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantidadDeSuites"/>
+        </Method>
+        <Method name="getCantidadDeLimosinas" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadDeLimosinas" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantidadDeLimosinas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Residencia" package="Entidades" visibility="public" xPosition="2113.0" yPosition="685.0">
+      <Fields>
+        <Field name="CantidadDeHabitaciones" type="Integer" visibility="private"/>
+        <Field name="DescuentosAGremios" type="Boolean" visibility="private"/>
+        <Field name="CampoDeportivo" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="CantidadDeHabitaciones"/>
+          <Argument type="Boolean" name="DescuentosAGremios"/>
+          <Argument type="Boolean" name="CampoDeportivo"/>
+          <Argument type="Boolean" name="EsPrivado"/>
+          <Argument type="Integer" name="SuperficieMetrosCuadrados"/>
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Direccion"/>
+          <Argument type="String" name="Localidad"/>
+          <Argument type="String" name="Gerente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCantidadDeHabitaciones" returnType="Integer" visibility="public"/>
+        <Method name="setCantidadDeHabitaciones" returnType="void" visibility="public">
+          <Argument type="Integer" name="CantidadDeHabitaciones"/>
+        </Method>
+        <Method name="getDescuentosAGremios" returnType="Boolean" visibility="public"/>
+        <Method name="setDescuentosAGremios" returnType="void" visibility="public">
+          <Argument type="Boolean" name="DescuentosAGremios"/>
+        </Method>
+        <Method name="getCampoDeportivo" returnType="Boolean" visibility="public"/>
+        <Method name="setCampoDeportivo" returnType="void" visibility="public">
+          <Argument type="Boolean" name="CampoDeportivo"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.Camping" target="Entidades.AlojamientoExtrahotelero"/>
+    <IsRelation name="is" source="Entidades.Hotel5Estrellas" target="Entidades.Hotel4Estrellas"/>
+    <IsRelation name="is" source="Entidades.Residencia" target="Entidades.AlojamientoExtrahotelero"/>
+    <IsRelation name="is" source="Entidades.AlojamientoExtrahotelero" target="Entidades.Alojamiento"/>
+    <IsRelation name="is" source="Entidades.Hotel" target="Entidades.Alojamiento"/>
+    <IsRelation name="is" source="Entidades.Hotel4Estrellas" target="Entidades.Hotel"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

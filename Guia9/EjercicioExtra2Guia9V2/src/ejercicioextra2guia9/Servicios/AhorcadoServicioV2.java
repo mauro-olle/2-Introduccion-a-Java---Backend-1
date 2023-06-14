@@ -14,7 +14,7 @@ public class AhorcadoServicioV2 {
 
     private Ahorcado CrearJuego() {
         System.out.println("Ingrese la palabra a adivinar");
-        String palabra = "casamiento";
+        String palabra = "estrategia";
 
         System.out.println("Ingrese la cantidad de intentos que tendra para adivinar la palabra");
         int intentos = sc.nextInt();
